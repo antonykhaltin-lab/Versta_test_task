@@ -1,0 +1,34 @@
+﻿@model CreateOrderModel
+
+@{
+    ViewData["Title"] = "Новый заказ";
+}
+<h1>Создайте новый заказ</h1>
+
+<form method="post" asp-controller="Orders" asp-action="SaveOrder">
+    <label asp-for="senderCity"></label>
+    <input asp-for="senderCity" />
+    <span asp-validation-for="senderCity"></span>
+
+    <label asp-for="senderAddress"></label>
+    <input asp-for="senderAddress" />
+    <span asp-validation-for="senderAddress"></span>
+
+    <label asp-for="recipientCity"></label>
+    <input asp-for="recipientCity" />
+    <span asp-validation-for="recipientCity"></span>
+
+    <label asp-for="recipientAddress"></label>
+    <input asp-for="recipientAddress" />
+    <span asp-validation-for="recipientAddress"></span>
+
+    <label asp-for="packageWeight"></label>
+    <input asp-for="packageWeight" />
+    <span asp-validation-for="packageWeight"></span>
+
+    <label asp-for="collectionDate"></label>
+    <input asp-for="collectionDate" />
+    <span asp-validation-for="collectionDate"></span>
+
+    <input type="submit" value="Отправить" />
+</form>

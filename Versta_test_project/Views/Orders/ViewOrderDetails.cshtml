@@ -1,0 +1,20 @@
+﻿@model Versta_test_project.Models.OrderModel
+@{
+    ViewData["Title"] = "Детали заказа";
+    Layout = "_Layout";
+}
+
+<h2>Информация о заказе №@Model.ID</h2>
+
+<div class="order-details">
+    <p><strong>Город отправителя:</strong> @Model.senderCity</p>
+    <p><strong>Адрес отправителя:</strong> @Model.senderAddress</p>
+
+    <p><strong>Город получателя:</strong> @Model.recipientCity</p>
+    <p><strong>Адрес получателя:</strong> @Model.recipientAddress</p>
+
+    <p><strong>Вес посылки:</strong> @Model.packageWeight кг</p>
+    <p><strong>Дата забора:</strong> @Model.collectionDate.ToString()</p>
+</div>
+
+<a asp-controller="Orders" asp-action="Index" class="btn-back">Вернуться к списку</a>
